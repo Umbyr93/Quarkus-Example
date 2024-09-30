@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: init-user_t
+      author: urusso
+      labels: init
+      comment: Initializing table User_T
+      changes:
+        - createTable:
+            tableName: USERZ
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: NAME
+                  type: varchar(255)
+              - column:
+                  name: SURNAME
+                  type: varchar(255)
+              - column:
+                  name: FISCAL_CODE
+                  type: varchar(255)
